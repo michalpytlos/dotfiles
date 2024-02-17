@@ -1,11 +1,13 @@
 call plug#begin()
 
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 Plug 'tomasiser/vim-code-dark'
 Plug 'folke/zen-mode.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
 Plug 'preservim/nerdtree'
+
 
 call plug#end()
 
@@ -31,3 +33,4 @@ nnoremap <leader>ff :Telescope find_files<CR>
 nnoremap <leader>fg :Telescope live_grep<CR>
 nnoremap <leader>fb :Telescope buffers<CR>
 nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <leader>gd :Gvdiffsplit<CR>
