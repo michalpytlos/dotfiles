@@ -7,6 +7,7 @@ Plug 'folke/zen-mode.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
 Plug 'preservim/nerdtree'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate', 'tag': 'v0.7.2'}
 
 
 call plug#end()
@@ -18,6 +19,14 @@ set number
 set relativenumber
 " Show line count for files in tree
 let g:NERDTreeFileLines = 1
+" Enable treesitter syntax highlighting
+lua <<EOF
+require('nvim-treesitter.configs').setup {
+  ensure_installed = { "python", "bash", "sql", "yaml", "toml", "json", "dockerfile"},
+  highlight = { enable = true },
+  indent = { enable = true }
+}
+EOF
 
 " Key mappings
 " Disable space in normal mode
