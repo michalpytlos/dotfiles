@@ -14,7 +14,7 @@ call plug#end()
 
 " Settings
 syntax enable
-colorscheme nightfox
+colorscheme codedark
 set number
 set relativenumber
 " Show line count for files in tree
@@ -41,5 +41,13 @@ nnoremap <C-u> <C-u>zz
 nnoremap <leader>ff :Telescope find_files<CR>
 nnoremap <leader>fg :Telescope live_grep<CR>
 nnoremap <leader>fb :Telescope buffers<CR>
-nnoremap <leader>t :NERDTreeFocus<CR>
+nnoremap <leader>fm :Telescope marks<CR>
+nnoremap <leader>fr :Telescope registers<CR>
+nnoremap <leader>ft :Telescope tags<CR>
+nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>gd :Gvdiffsplit<CR>
+" better window navigation
+nnoremap <C-h> <C-w><C-h>
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-l> <C-w><C-l>
