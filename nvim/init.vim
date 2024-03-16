@@ -17,6 +17,8 @@ syntax enable
 colorscheme codedark
 set number
 set relativenumber
+" Recursive file search
+set path+=**
 " Show line count for files in tree
 let g:NERDTreeFileLines = 1
 
