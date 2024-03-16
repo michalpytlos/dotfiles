@@ -22,19 +22,6 @@ set path+=**
 " Show line count for files in tree
 let g:NERDTreeFileLines = 1
 
-" Enable treesitter syntax highlighting
-" "c", "lua", "vim", "vimdoc" and "query" parsers should always be installed
-" Neovim bundles its own parsers but they can be incompatible with
-" nvim-treesitter; the solution is to always install the required parsers via
-" nvim-treesitter https://github.com/nvim-treesitter/nvim-treesitter/issues/3970#issuecomment-1377126359
-lua <<EOF
-require('nvim-treesitter.configs').setup {
-  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "python", "bash", "sql", "yaml", "toml", "json", "dockerfile", "markdown", "markdown_inline"},
-  highlight = { enable = true },
-  indent = { enable = true }
-}
-EOF
-
 " Key mappings
 " Disable space in normal mode
 nnoremap <SPACE> <Nop>
@@ -58,3 +45,6 @@ nnoremap <C-h> <C-w><C-h>
 nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
+
+" Lua configs
+lua require('treesitter')
