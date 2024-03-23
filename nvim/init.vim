@@ -1,3 +1,4 @@
+" Plugins
 call plug#begin()
 
 Plug 'tpope/vim-commentary'
@@ -10,6 +11,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " colorschemes
 Plug 'EdenEast/nightfox.nvim'
 Plug 'tomasiser/vim-code-dark'
+
 call plug#end()
 
 " Settings
@@ -21,6 +23,8 @@ set relativenumber
 set path+=**
 " Show line count for files in tree
 let g:NERDTreeFileLines = 1
+" Characters to use in list mode
+set listchars=tab:>-,lead:.,trail:.,eol:$,nbsp:+
 
 " Key mappings
 " Disable space in normal mode
@@ -48,3 +52,4 @@ nnoremap <C-l> <C-w><C-l>
 
 " Lua configs
 lua require('treesitter')
+									     
