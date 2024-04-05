@@ -12,6 +12,10 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " colorschemes
 Plug 'EdenEast/nightfox.nvim'
 Plug 'tomasiser/vim-code-dark'
+" lsp
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'neovim/nvim-lspconfig'
 
 call plug#end()
 
@@ -56,4 +60,4 @@ nnoremap <leader>p :r !powershell.exe -c Get-Clipboard<CR>
 
 " Lua configs
 lua require('treesitter')
-									     
+lua require('lsp')
