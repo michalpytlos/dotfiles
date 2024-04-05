@@ -57,6 +57,13 @@ nnoremap <C-l> <C-w><C-l>
 " Windows clipboard from WSL
 vnoremap <leader>y :w !clip.exe<CR><CR>
 nnoremap <leader>p :r !powershell.exe -c Get-Clipboard<CR>
+" Diagnostics
+lua << EOF
+vim.keymap.set('n', '<leader>df', vim.diagnostic.open_float)
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
+vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist)
+EOF
 
 " Lua configs
 lua require('treesitter')
