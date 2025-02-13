@@ -9,6 +9,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'preservim/nerdtree'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 " colorschemes
 Plug 'EdenEast/nightfox.nvim'
 Plug 'tomasiser/vim-code-dark'
@@ -47,8 +48,12 @@ nnoremap <leader>fb :Telescope buffers<CR>
 nnoremap <leader>fm :Telescope marks<CR>
 nnoremap <leader>fr :Telescope registers<CR>
 nnoremap <leader>ft :Telescope tags<CR>
-nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>nt :NERDTreeToggle<CR>
 nnoremap <leader>gd :Gvdiffsplit<CR>
+" terminal
+nnoremap <leader>tf :ToggleTerm direction=float<CR>
+nnoremap <leader>tb :ToggleTerm direction=horizontal<CR>
+tnoremap <leader><Esc> <C-\><C-n>  " Change to Normal mode
 " better window navigation
 nnoremap <C-h> <C-w><C-h>
 nnoremap <C-j> <C-w><C-j>
@@ -68,3 +73,4 @@ EOF
 " Lua configs
 lua require('treesitter')
 lua require('lsp')
+lua require('toggleterm').setup()
