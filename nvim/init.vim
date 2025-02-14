@@ -7,7 +7,8 @@ Plug 'tpope/vim-surround'
 Plug 'folke/zen-mode.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'preservim/nerdtree'
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 " colorschemes
@@ -27,10 +28,11 @@ set number
 set relativenumber
 " Recursive file search
 set path+=**
-" Show line count for files in tree
-let g:NERDTreeFileLines = 1
 " Characters to use in list mode
 set listchars=tab:>-,lead:.,trail:.,eol:$,nbsp:+
+" Disable netrw
+let g:loaded_netrw = 1
+let g:loaded_netrwPlugin = 1
 
 " Key mappings
 " Disable space in normal mode
@@ -48,7 +50,7 @@ nnoremap <leader>fb :Telescope buffers<CR>
 nnoremap <leader>fm :Telescope marks<CR>
 nnoremap <leader>fr :Telescope registers<CR>
 nnoremap <leader>ft :Telescope tags<CR>
-nnoremap <leader>nt :NERDTreeToggle<CR>
+nnoremap <leader>tt :NvimTreeToggle<CR>
 nnoremap <leader>gd :Gvdiffsplit<CR>
 " terminal
 nnoremap <leader>tf :ToggleTerm direction=float<CR>
@@ -74,3 +76,4 @@ EOF
 lua require('treesitter')
 lua require('lsp')
 lua require('toggleterm').setup()
+lua require('nvim-tree').setup()
