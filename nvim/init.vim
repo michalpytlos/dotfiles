@@ -53,9 +53,8 @@ nnoremap <leader>ft :Telescope tags<CR>
 nnoremap <leader>tt :NvimTreeToggle<CR>
 nnoremap <leader>gd :Gvdiffsplit<CR>
 " terminal
-nnoremap <leader>tf :ToggleTerm direction=float<CR>
-nnoremap <leader>tb :ToggleTerm direction=horizontal<CR>
-tnoremap <leader><Esc> <C-\><C-n>  " Change to Normal mode
+nnoremap <C-t> :ToggleTerm direction=float<CR>
+tnoremap <C-t> <C-\><C-n>:ToggleTerm direction=float<CR>  " Change to Normal mode first
 " better window navigation
 nnoremap <C-h> <C-w><C-h>
 nnoremap <C-j> <C-w><C-j>
