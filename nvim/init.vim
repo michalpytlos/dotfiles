@@ -11,6 +11,7 @@ Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
+Plug 'nvim-lualine/lualine.nvim'
 " colorschemes
 Plug 'EdenEast/nightfox.nvim'
 Plug 'tomasiser/vim-code-dark'
@@ -76,3 +77,4 @@ lua require('treesitter')
 lua require('lsp')
 lua require('toggleterm').setup()
 lua require('nvim-tree').setup()
+lua require('lualine-config')
