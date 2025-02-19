@@ -51,11 +51,15 @@ nnoremap <leader>fb :Telescope buffers<CR>
 nnoremap <leader>fm :Telescope marks<CR>
 nnoremap <leader>fr :Telescope registers<CR>
 nnoremap <leader>ft :Telescope tags<CR>
-nnoremap <leader>tt :NvimTreeToggle<CR>
+nnoremap <leader>e :NvimTreeToggle<CR>
 nnoremap <leader>gd :Gvdiffsplit<CR>
+" buffer navigation
+nnoremap <leader>b :buffers<CR>:buffer<space>
 " terminal
-nnoremap <C-t> :ToggleTerm direction=float<CR>
-tnoremap <C-t> <C-\><C-n>:ToggleTerm direction=float<CR>  " Change to Normal mode first
+nnoremap <leader>tf :ToggleTerm direction=float<CR>
+nnoremap <leader>tb :ToggleTerm direction=horizontal<CR>
+tnoremap <leader>tf <C-\><C-n>:ToggleTerm direction=float<CR>  " Change to Normal mode first
+tnoremap <leader>tb <C-\><C-n>:ToggleTerm direction=horizontal<CR>  " Change to Normal mode first
 " better window navigation
 nnoremap <C-h> <C-w><C-h>
 nnoremap <C-j> <C-w><C-j>
