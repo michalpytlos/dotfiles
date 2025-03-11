@@ -57,10 +57,8 @@ nnoremap <leader>z :ZenMode<CR>
 " buffer navigation
 nnoremap <leader>b :buffers<CR>:buffer<space>
 " terminal
-nnoremap <C-t>f :ToggleTerm direction=float<CR>
-nnoremap <C-t>b :ToggleTerm direction=horizontal<CR>
-tnoremap <C-t>f <C-\><C-n>:ToggleTerm direction=float<CR>  " Change to Normal mode first
-tnoremap <C-t>b <C-\><C-n>:ToggleTerm direction=horizontal<CR>  " Change to Normal mode first
+nnoremap <C-t> :ToggleTerm direction=float<CR>
+tnoremap <C-t> <C-\><C-n>:ToggleTerm direction=float<CR>  " Change to Normal mode first
 " better window navigation
 nnoremap <C-h> <C-w><C-h>
 nnoremap <C-j> <C-w><C-j>

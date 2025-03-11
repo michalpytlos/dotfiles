@@ -8,4 +8,6 @@ require("mason-lspconfig").setup({
 
 -- setup language servers
 require("lspconfig").lua_ls.setup {}
-require("lspconfig").pylsp.setup {}
+require("lspconfig").pylsp.setup {
+-- Error codes: https://docs.astral.sh/ruff/rules/#pycodestyle-e-w
+}
